@@ -115,7 +115,7 @@ def main():
         # Extract Bone Lines
         bone_lines_out = []
         # Bone annotations are in a separate folder
-        bone_json_path = project_root / "../Dataset/Training/Bone Level Annotations" / f"{basename}.json"
+        bone_json_path = project_root / "../Raw Dataset/Training/Bone Level Annotations" / f"{basename}.json"
         if bone_json_path.exists():
             try:
                 with open(bone_json_path, 'r', encoding='utf-8') as f:

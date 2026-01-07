@@ -19,6 +19,9 @@ else:
     from .features.window.main_window import AnnotationMainWindow
 
 def main() -> None:
+    """
+    This function is the main entry point for the application.
+    """
     app = QApplication([])
     app.setApplicationName("Bitewing Landmark Annotator")
     window = AnnotationMainWindow()

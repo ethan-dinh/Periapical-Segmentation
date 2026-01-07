@@ -29,4 +29,7 @@ def main() -> None:
     app.exec_()
 
 if __name__ == "__main__":
+    """
+    This is the main entry point for the application.
+    """
     main()

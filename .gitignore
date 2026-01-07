@@ -1,6 +1,18 @@
+# System files
 /.DS_Store
 */.DS_Store
+
+# Raw Dataset
 /Raw Dataset/
+
+# ROI Detection
 /ROI Detection/Data
+
+# Python cache
 */__pycache__
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Manual Annotation Data
 Manual Annotation Data/

@@ -1,5 +1,6 @@
 /.DS_Store
 */.DS_Store
-/Dataset
+/Raw Dataset/
 /ROI Detection/Data
 */__pycache__
+Manual Annotation Data/

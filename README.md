@@ -39,14 +39,14 @@ The data used in this repository are publicly available from the following publi
 ### Download and Directory Structure
 
 1. Download the dataset associated with the publication above.
-2. Extract the contents into a directory named **`Dataset`**.
-3. Place the **`Dataset`** directory within the root of this repository.
+2. Extract the contents into a directory named **`Raw Dataset`**.
+3. Place the **`Raw Dataset`** directory within the root of this repository.
 
 The expected directory structure is:
 
 ```text
 Periapical-Segmentation/
-├── Dataset/
+├── Raw Dataset/
 │   ├── (downloaded data files)
 ├── README.md
 ├── ROI Detection/

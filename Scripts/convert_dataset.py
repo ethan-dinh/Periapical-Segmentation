@@ -14,11 +14,11 @@ def main():
 
     # Paths
     project_root = Path(__file__).parent.resolve()
-    source_json_dir = project_root / "../Dataset/Training/Key Points Annotations"
-    source_img_dir = project_root / "../Dataset/Training/Images"
+    source_json_dir = project_root / "../Raw Dataset/Training/Key Points Annotations"
+    source_img_dir = project_root / "../Raw Dataset/Training/Images"
 
     # Destination directories
-    training_dir = project_root / "Data"
+    training_dir = project_root / "../Manual Annotation Data"
     training_annotations_dir = training_dir / "annotations"
 
     # Create directories

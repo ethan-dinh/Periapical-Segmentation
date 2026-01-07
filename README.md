@@ -66,3 +66,5 @@ All analysis scripts assume this directory structure. If the dataset is placed e
 
 * I am currenlty working on a conversion script that will read through the predefined ROI annotations and convert them to the format required for the training data. The script will read through the bone lines as well as the landmarks and convert them to DentAnX format.
 * I modified the DentAnX codebase to allow for bone line annotations and landmarks to be added to the image canvas. I removed the anotations for the maxillary and mandibular ROIs since the periapical radiographs only contain either maxillary or mandibular teeth.
+* I fixed the issue with the bone lines not being displayed in the DentAnX GUI. This was due to the fact that the format of the bone lines was not compatible with the format expected by the GUI.
+* Migrated the QT styling to a separate file to allow for easy modification.

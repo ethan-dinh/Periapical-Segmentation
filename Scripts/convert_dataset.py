@@ -14,16 +14,17 @@ def main():
 
     # Paths
     project_root = Path(__file__).parent.resolve()
-    source_json_dir = project_root / "../Raw Dataset/Training/Key Points Annotations"
-    source_img_dir = project_root / "../Raw Dataset/Training/Images"
+    data_type = "Training"
+    source_json_dir = project_root / f"../Raw Dataset/{data_type}/Key Points Annotations"
+    source_img_dir = project_root / f"../Raw Dataset/{data_type}/Images"
 
     # Destination directories
-    training_dir = project_root / "../Manual Annotation Data"
-    training_annotations_dir = training_dir / "annotations"
+    output_dir = project_root / "../Manual Annotation Data"
+    annotations_dir = output_dir / "annotations"
 
     # Create directories
-    training_dir.mkdir(exist_ok=True)
-    training_annotations_dir.mkdir(exist_ok=True)
+    output_dir.mkdir(exist_ok=True)
+    annotations_dir.mkdir(exist_ok=True)
 
     if not source_json_dir.exists():
         print(f"Error: Source JSON dir not found at {source_json_dir}")
@@ -54,7 +55,7 @@ def main():
         img_filename = input_img_path.name
 
         # Copy Image
-        dest_img_path = training_dir / img_filename
+        dest_img_path = output_dir / img_filename
         shutil.copy(input_img_path, dest_img_path)
 
         # Get Image Dimensions
@@ -115,7 +116,7 @@ def main():
         # Extract Bone Lines
         bone_lines_out = []
         # Bone annotations are in a separate folder
-        bone_json_path = project_root / "../Raw Dataset/Training/Bone Level Annotations" / f"{basename}.json"
+        bone_json_path = project_root / f"../Raw Dataset/{data_type}/Bone Level Annotations" / f"{basename}.json"
         if bone_json_path.exists():
             try:
                 with open(bone_json_path, 'r', encoding='utf-8') as f:
@@ -167,7 +168,7 @@ def main():
         }
 
         # Save Output JSON
-        output_json_path = training_annotations_dir / f"{basename}.json"
+        output_json_path = annotations_dir / f"{basename}.json"
         with open(output_json_path, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, indent=2)
 

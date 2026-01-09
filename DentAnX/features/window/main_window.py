@@ -145,7 +145,7 @@ class AnnotationMainWindow(QMainWindow):
         QShortcut(QKeySequence(Qt.Key_Backspace), self, activated=self.canvas.delete_selected_item)
 
     def open_folder(self) -> None:
-        directory = QFileDialog.getExistingDirectory(self, "Select Image Folder")
+        directory = QFileDialog.getExistingDirectory(self, "Select Data Folder")
         if not directory:
             return
         self._load_directory(directory)

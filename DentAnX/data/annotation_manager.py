@@ -46,8 +46,17 @@ class AnnotationManager:
         root = Path(path).expanduser().resolve()
         if not root.is_dir():
             raise FileNotFoundError(path)
-        self.image_dir = root
-        self.annotation_dir = root / "annotations"
+
+        # Check for "images" subdirectory
+        images_subdir = root / "images"
+        if images_subdir.is_dir():
+            self.image_dir = images_subdir
+            self.annotation_dir = root / "annotations"
+        else:
+            # Fallback to legacy structure
+            self.image_dir = root
+            self.annotation_dir = root / "annotations"
+
         self.annotation_dir.mkdir(parents=True, exist_ok=True)
         self._cache.clear()
         return self._scan_images()

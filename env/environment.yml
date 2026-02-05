@@ -19,6 +19,8 @@ dependencies:
   - pytorch
   - torchvision
   - jupyter
+  - seaborn
+  - scikit-learn
   - pip
   - pip:
     - ultralytics

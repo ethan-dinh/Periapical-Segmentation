@@ -2,6 +2,9 @@
 .DS_Store
 */.DS_Store
 
+# Github Copilot Files
+.github/
+
 # Raw Dataset
 /Raw Dataset/
 

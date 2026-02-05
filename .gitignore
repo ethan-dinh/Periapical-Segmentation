@@ -6,7 +6,8 @@
 /Raw Dataset/
 
 # ROI Detection
-/ROI Detection/Data
+/ROI Detection V1/Data
+/Tooth ROI Model/data
 
 # Python cache
 */__pycache__

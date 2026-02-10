@@ -11,6 +11,8 @@
 # ROI Detection
 /ROI Detection V1/Data
 /Tooth ROI Model/data
+/Tooth ROI Model/data_debug/
+/Tooth ROI Model/runs/
 
 # Python cache
 */__pycache__
